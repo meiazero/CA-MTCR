@@ -1,0 +1,30 @@
+# Normalize every text file to LF in the repo and the working tree.
+* text=auto eol=lf
+
+# Text, with language-aware diff hunks
+*.py        text diff=python
+*.md        text diff=markdown
+*.sh        text eol=lf
+*.sbatch    text eol=lf
+*.toml      text
+*.yaml      text
+*.yml       text
+*.json      text
+*.csv       text
+.gitmodules text
+
+# Generated: collapsed in GitHub diffs and excluded from language stats
+uv.lock     text linguist-generated=true
+
+# Data and model artifacts: never diffed, never normalized
+*.tif       binary
+*.tiff      binary
+*.npy       binary
+*.npz       binary
+*.parquet   binary
+*.pt        binary
+*.pth       binary
+*.ckpt      binary
+*.png       binary
+*.pdf       binary
+*.gz        binary
