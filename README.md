@@ -71,3 +71,8 @@ gives no change information; the region mask reaches the next block's attention;
 zero only at the target; a module extractor moves with the loss; optimizer groups and
 schedule follow Sec. 4.1; the VQ straight-through passes gradients to the encoder and the
 codebook; SAR pretraining lowers its loss and its encoder loads into the model.
+
+## Checks before push
+
+Run `git config core.hooksPath .githooks` once per clone. `.githooks/pre-push` then
+refuses a push that fails `uvx ruff format --check .` or `uvx ruff check .`.
